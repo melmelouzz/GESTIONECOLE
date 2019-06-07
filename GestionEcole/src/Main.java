@@ -1,22 +1,25 @@
 import java.sql.SQLException;
-import java.util.ArrayList;
 
+import Control.Connexion;
 import DAO.DAO;
 import DAO.EcoleDAO;
 import Model.Ecole;
+import Vue.ConnecGraph;
+import Vue.Graphique;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-	    ArrayList<String> test = new ArrayList<>();
-	    ArrayList<String> test2 = new ArrayList<String>();
 
 	    try {
-	    	Connexion c = new Connexion("gestion_ecole", "root", "");
-	    	System.out.println("connexion réussie");
 
+	    	Graphique g = new Graphique();
+	    	
+	    	Connexion c = new Connexion("gestion_ecole", "root", "");
+	    	
+	    	System.out.println("connexion réussie");
 
 	    	DAO<Ecole> ecoleDAO = new EcoleDAO(c.getConn());
 	    	for(int i = 1; i < 6; i++)
@@ -24,6 +27,8 @@ public class Main {
 	    		Ecole ecole = ecoleDAO.find(i);
 	    		System.out.println("Ecole N°" + ecole.getId_ecole() + "  - " + ecole.getNom_ecole());
 	    	}
+	    	
+	    	
 	    	
 //	    	Ecole ec = ecoleDAO.find(1);
 //	    	ecoleDAO.delete(ec);

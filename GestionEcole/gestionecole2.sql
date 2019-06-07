@@ -35,7 +35,7 @@ CREATE TABLE `Classe` (
 
 CREATE TABLE `Discipline` (
   `id_discipline` int(255) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `nom_discipline` int(255) NOT NULL
+  `nom_discipline` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 CREATE TABLE `Enseignement` (
@@ -85,6 +85,10 @@ CREATE TABLE `Ecole` (
   `id_ecole` int(255) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nom_ecole` int(255) NOT NULL
   ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO ecole (`nom_ecole`) VALUES 
+("ECE"),
+("ESILV",);
 
 CREATE TABLE `Evaluation` (
   `id_evaluation` int(255) NOT NULL PRIMARY KEY AUTO_INCREMENT,

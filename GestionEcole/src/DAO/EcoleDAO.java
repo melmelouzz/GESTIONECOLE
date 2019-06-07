@@ -30,14 +30,15 @@ public class EcoleDAO extends DAO<Ecole>{
 			e.printStackTrace();
 			return false;
 		}
-
+		
 	}
+
+	
 	
 	public boolean delete(Ecole obj)
 	{
 		try
 		{
-			
 //			this.connect.createStatement().executeQuery("DELETE FROM ecole WHERE id_ecole="+obj.getId_ecole());
 //			System.out.println("Objet bien suppr");
 //			return true;
